@@ -3,9 +3,9 @@ require "slugize/version"
 
 
 class String
-  def slugize
+  def slugize(sep = "-")
     str = self
-    separator = '-'
+    separator = sep
     re_separator = Regexp.escape(separator)
     str = pl2us(str)
     str.gsub!(/ /, separator)
